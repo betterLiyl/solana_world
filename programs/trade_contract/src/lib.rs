@@ -1,18 +1,18 @@
 use anchor_lang::prelude::*;
-#[warn(unused_imports)]
+
 use crate::trade_accounts::*;
 
 pub mod error;
 pub mod instructions;
 pub mod trade_accounts;
 
-declare_id!("FG2t6RZk7GPPxqQ58sKS6JKT7rybauhFkvjnff8e2KMS");
+declare_id!("c9MjPDoaAxrXXnzU9DA3BgYjcNfwEG3g7mTMUQX2fAb");
 
 #[program]
-pub mod solana_world {
+pub mod trade_contract {
     use super::*;
 
-    pub fn initialize(ctx: Context<TransferAccount>, amount: u64) -> Result<()> {
+    pub fn trade(ctx: Context<TransferAccount>, amount: u64) -> Result<()> {
         msg!("start: {:?}", ctx.program_id);
         instructions::trade::trade_mint(ctx, amount)?;
         Ok(())
