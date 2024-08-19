@@ -11,7 +11,8 @@ solana_world = "FG2t6RZk7GPPxqQ58sKS6JKT7rybauhFkvjnff8e2KMS"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+# cluster = "Localnet"
+cluster = "http://127.0.0.1:8899"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
