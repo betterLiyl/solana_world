@@ -93,7 +93,7 @@ impl<'info> CreateCollection<'info> {
 
         let creator = vec![
             Creator {
-                address: self.mint_authority.key().clone(),
+                address: self.mint_authority.key(),
                 verified: true,
                 share: 100,
             },

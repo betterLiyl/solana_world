@@ -1,4 +1,3 @@
-use crate::error::ErrorCode::InsufficientBalance;
 use crate::trade_accounts::*;
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Transfer as TokenTransfer};

@@ -1,4 +1,4 @@
-use crate::states::{page_visits, PageVisits};
+use crate::states::PageVisits;
 use anchor_lang::prelude::*;
 
 #[derive(Accounts)]
