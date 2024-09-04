@@ -1,0 +1,28 @@
+[package]
+name = "account_data-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.account_data]
+path = "../program/account_data"
+
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "account_data"
+path = "fuzz_targets/account_data.rs"
+test = false
+doc = false
+bench = false
